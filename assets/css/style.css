@@ -1,0 +1,17 @@
+:root{
+    --fondo_blanco:#fff;
+    --fondo_medio:#E5E5E5;
+    --fondo_oscuro:#EAF2FD;
+    --azul:#2A7AE4;
+    --titulos:#464646;
+    --placeholder:#A2A2A2;
+    --letras:'Raleway',sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--letras);
+}
+placeholder{
+    color: var(--placeholder);
+}

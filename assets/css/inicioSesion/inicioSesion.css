@@ -1,0 +1,35 @@
+.inicioSesion{
+    background: var(--fondo_medio);
+    padding: 3rem;
+    min-width: 190px;
+}
+
+.inicio_ingreso{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+.inicio_titulo{
+    margin-bottom: 2rem;
+    color: var(--titulos);
+}
+.inicio_input{
+    width: 80%;
+    min-width: 190px;
+    /* color: var(--placeholder); */
+    border: none;
+    padding: 0.5rem;
+}
+.inicio_btn{
+    width: 7rem;
+    height: 2rem;
+    margin-top: 1rem;
+    background: var(--azul);
+    color: var(--fondo_blanco);
+    border: none;
+    font-weight: 100;
+    letter-spacing: 3px;
+}

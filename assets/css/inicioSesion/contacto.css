@@ -1,0 +1,33 @@
+.contacto{
+    min-width: 285px;
+    background: var(--fondo_oscuro);
+}
+.contacto_contenido{
+    width: 331px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2rem 1rem;
+
+}
+.contacto_titulo{
+    /* color: var(--titulo); */
+}
+.contacto_input, .contacto_textarea{
+    width: 70%;
+    border: none;
+    padding: 0.5rem;
+}
+.contacto_textarea{
+    height: 82px;
+}
+.contacto_btn{
+    width: 8rem;
+    height: 3rem;
+    margin-top: 20px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    background: var(--azul);
+    color: var(--fondo_blanco);
+    border: none;
+}

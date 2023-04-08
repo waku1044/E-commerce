@@ -1,0 +1,10 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 1rem;
+}
+.lupita{
+    width: 17px;
+    height: 17px;
+}
