@@ -1,0 +1,41 @@
+/* .starWars{
+    
+    min-width: 360px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    flex-wrap: wrap;
+    
+}*/
+.star_titulo{
+} 
+.star_btn{
+    width: 140px;
+    
+}
+.simbol{
+    width: 200px;
+    
+}
+.card{
+    border: none;
+}
+.imagenes{
+    /* width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2px 2px; */
+}
+.producto{
+    margin: 0 0px;
+}
+.nombre_producto{
+
+}
+.precio{
+
+}
+.verProducto{
+
+} 
