@@ -15,3 +15,9 @@
 placeholder{
     color: var(--placeholder);
 }
+.card{
+    margin:1rem;
+}
+.card img{
+    width: 100%;
+}
