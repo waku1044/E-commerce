@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/principal/header.css">
+    
+    <link rel="stylesheet" href="../css/principal/quienes_somos.css">
+    <link rel="stylesheet" href="../css/principal/contacto.css">
+    <title>AluraGeek</title>
+</head>
+<body>
+    <div class="container-fluid">
+
+        <header class="row d-flex justify-content-between align-items-center py-3">
+            <img src="../img/Logo.svg" alt="Logo" class="col-4 col-md-4img-fluid">
+            <!-- <input type="search" placeholder="¿Que desea buscar?"> -->
+            <button class="col-4 col-md-2 btn btn-outline-primary  order-3">Administrador</button>
+            <img src="../img/lupa.png" alt="lupita" class="col-4 col-md-6 header_lupa">
+        </header>
+
+        <section class="agregar_producto row mx-3">
+            <h2 class="agregar_title col-12 py-3">Agregar nuevo producto</h2>
+            <article class="agregar_detalles row d-flex flex-around">
+                <input type="text" class="agregar_url my-2 border-buttom p-2" placeholder="URL de la imagen">
+                <select value="categoria" class="my-2">
+                    Categoria
+                    <option name="starWars" id="starWars" class="categoria">Star Wars</option>
+                    <option name="consola" id="consola" class="categoria">Consola</option>
+                    <option name="diversos" id="diverso" class="categoria">Diversos</option>
+
+
+                </select>
+
+                <input type="text" class="nombre_producto my-2 p-2" placeholder="Nombre del producto">
+                <input type="number" class="precio my-2 p-2" placeholder="Precio del producto">
+                <textarea name="descripcion del producto" id="descripcionProducto"  class="descripcion my-2 p-2" placeholder="Descripcion del producto"></textarea>
+                <buttom class="agregar btn btn-primary my-3">Agregar Producto</buttom>
+            </article>
+        </section>
+        
+        
+        <div class="quienes_somos row p-4 ">
+            <div class="quienes_contenido col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+                <img src="../img/Logo.svg" class="somos_img" alt="Logo">
+                <p class="somos_parrafo">Quienes somos</p>
+                <p class="somos_parrafo">Politica de privacidad</p>
+                <p class="somos_parrafo">Programa de fidelidad</p>
+                <p class="somos_parrafo">Nuestras tiendas</p>
+                <p class="somos_parrafo">Quiero ser franquiciado</p>
+                <p class="somos_parrafo">Anúncie aqui</p>
+            </div>
+            <div class="contacto_contenido col-12 col-md-6 d-flex flex-column justify-content-start">
+                <h2 class="contacto_titulo py-4">Hable con nosotros</h2>
+                <input type="text" class="contacto_input my-3 px-2" placeholder="Nombre">
+                <textarea name="mensaje" class="contacto_textarea my-3 p-2" id="mensaje"  placeholder="Escribe tu mensaje"></textarea>
+                <button class="contacto_btn btn btn-primary">Enviar Mensaje</button>
+            </div>
+        </div>
+        <footer class="row">
+            <p class="col-12 d-flex justify-content-center align-items-center p-3">Desarrollado por Wakutec, 2023</p>
+        </footer>
+    </div>
+    <!-- <script src="../js/ingreso.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
