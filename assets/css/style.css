@@ -12,12 +12,23 @@
     padding: 0;
     font-family: var(--letras);
 }
+.star_btn , .consola_btn, .diversos_btn{
+    width: 100%;
+    max-width:150px;
+}
+.btn_agregar{
+    min-width: 94px;
+}
+section{
+    background: var(--fondo_oscuro);
+}
 placeholder{
     color: var(--placeholder);
 }
-.card{
-    margin:1rem;
-}
-.card img{
+/* .card{
+    width: 510;
+    margin:.5rem;
+} */
+/* .card img{
     width: 100%;
-}
+} */

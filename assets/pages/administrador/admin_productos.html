@@ -14,20 +14,20 @@
 <body>
     <div class="container-fluid">
 
-        <header class="row d-flex justify-content-between align-items-center py-3">
-            <img src="../../img/Logo.svg" class="col-4 img-fluid">
-            <!-- <input type="search" placeholder="¿Que desea buscar?"> -->
-            <button class="col-4 btn btn-outline-primary ">Login</button>
-            <img src="../../img/lupa.png" alt="lupita" class="col-4 header_lupa me-1">
-        </header>
-        <div class="row py-3 banner">
-            <img src="../img_principal/banner/Hero.png" alt="promocion1" class="col-12 img-fluid">
-        </div>
-        <section class="starWars row py-4">
-                <div class="principal d-flex justify-content-between">
-                    <h2 class="star_titulo col-7 gx-3">Star Wars</h2>
-                    <button type="text" class="star_btn btn btn-outline-primary">Ver todo &#8594</button>
+        <header class="row d-flex justify-content-center align-items-center py-3">
+            <img src="../../img/Logo.svg" class="col-4 img_logo">
+            <div class="busqueda col-12 col-sm-8 mb-3 d-flex justify-content-center">
+                <input type="search" class="col-6" placeholder="¿Que desea buscar?">
+                <!-- <button class="col-4 btn btn-outline-primary ">Login</button> -->
+                <img src="../../img/lupa.png" alt="lupita" class="col-6 header_lupa ms-2">
 
+            </div>
+        </header>
+        
+        <section class="starWars row py-4">
+                <div class="cabecera ">
+                    <h2 class="col-md-6">Todos los productos</h2>
+                    <button class="btn_agregar btn btn-primary col-4">Agregar producto</button>
                 </div>
                 <article class="imagenes d-flex justify-content-around flex-wrap py-3">
                     <div class="card ">
@@ -66,10 +66,7 @@
             
         </section>
         <section class="consola row">
-            <div class="principal d-flex justify-content-between">
-                <h2 class="consola_title col-7 gx-3">Consola</h2>
-                <button type="text" class="consola_btn btn btn-outline-primary col-5">Ver todo &#8594</button>
-            </div>
+            
             <article class="imagenes d-flex justify-content-around flex-wrap py-3">
                 <div class="card">
                     <img src="../img_principal/juegos/juego.png" alt="producto" class="producto card-img-top">
@@ -107,10 +104,7 @@
         
     </section>
     <section class="diversos row">
-         <div class="principal d-flex justify-content-between">
-             <h2 class="diversos_title col-7 gx-3">Diversos</h2>
-             <button type="text" class="diversos_btn btn btn-outline-primary col-5 gap-5">Ver todo &#8594</button>
-         </div>   
+            
         <article class="imagenes d-flex justify-content-around flex-wrap py-3">
             <div class="card">
                 <img src="../img_principal/diversos/diverso.png" alt="producto" class="producto card-img-top">
