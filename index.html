@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
@@ -14,27 +15,30 @@
     <link rel="stylesheet" href="/assets/css/inicioSesion/header.css">
     <link rel="stylesheet" href="/assets/css/inicioSesion/inicioSesion.css">
     <link rel="stylesheet" href="/assets/css/inicioSesion/quienes_somos.css">
-    <link rel="stylesheet" href="/assets/css/inicioSesion/contacto.css">
-    <link rel="stylesheet" href="/assets/css/inicioSesion/footer.css">
+    <!-- <link rel="stylesheet" href="/assets/css/inicioSesion/contacto.css"> -->
+    <!-- <link rel="stylesheet" href="/assets/css/inicioSesion/footer.css"> -->
     <title>AluraGeek</title>
 </head>
 <body>
     
-        <header>
-            <img src="assets/img/Logo.svg" alt="Logo">
-            <img src="assets/img/lupa.png" class="lupita" alt="lupita">
+    <div class="container-fluid">
+
+        <header class="d-flex justify-content-center align-items-center p-4">
+            <img src="assets/img/Logo.svg" class="logo" alt="Logo">
+            <!-- <img src="assets/img/lupa.png" class="lupita" alt="lupita"> -->
         </header>
         <main>
-            <div class="inicioSesion">
-                <div class="inicio_ingreso">
-                    <h2 class="inicio_titulo">Iniciar Sesión</h2>
-                    <input type="text" class="inicio_input" placeholder="Escriba su correo electronico" data-usuario>
-                    <input type="password" class="inicio_input" placeholder="Escriba su contraseña" data-contraseña>
-                    <button class="inicio_btn" data-btn>Entrar</button>
+            <div class="inicioSesion row">
+                <div class="inicio_ingreso d-flex flex-column justify-content-center align-items-center py-5">
+                    <h2 class="inicio_titulo pb-4">Iniciar Sesión</h2>
+                    <input type="text" class="inicio_input p-2 mb-4 w-25" placeholder="Usuario" data-usuario>
+                    <input type="password" class="inicio_input p-2 mb-4 w-25" placeholder="Contraseña" data-contraseña>
+                    <button class="inicio_btn btn btn-primary" data-btn>Entrar</button>
+                    <a href="#" class="text-decoration-none py-3">No estoy registrado</a>
                 </div>
             </div>
-            <div class="quienesSomos">
-                <div class="quienes_contenido">
+            <div class="quienesSomos row py-5">
+                <div class="quienes_contenido col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
                     <img src="assets/img/Logo.svg" class="somos_img" alt="Logo">
                     <p class="somos_parrafo">Quienes somos</p>
                     <p class="somos_parrafo">Politica de privacidad</p>
@@ -43,17 +47,18 @@
                     <p class="somos_parrafo">Quiero ser franquiciado</p>
                     <p class="somos_parrafo">Anúncie aqui</p>
                 </div>
-            </div>
-            <div class="contacto">
-                <div class="contacto_contenido">
-                    <h2 class="contacto_titulo">Hable con nosotros</h2>
-                    <input type="text" class="contacto_input" placeholder="Nombre">
-                    <textarea name="mensaje" class="contacto_textarea" id="mensaje"  placeholder="Escribe tu mensaje"></textarea>
-                    <button class="contacto_btn">Enviar Mensaje</button>
+                <div class="contacto_contenido col-12 col-md-6  d-flex flex-column">
+                    <h2 class="contacto_titulo col-6 py-3">Hable con nosotros</h2>
+                    <input type="text" class="contacto_input col-6 my-3 p-2" placeholder="Nombre">
+                    <textarea name="mensaje" class="contacto_textarea col-6 my-3 p-2" id="mensaje"  placeholder="Escribe tu mensaje"></textarea>
+                    <button class="contacto_btn col-3 btn btn-primary">Enviar Mensaje</button>
                 </div>
             </div>
-            <footer>
-                <p>Desarrollado por Wakutec, 2023</p>
+            
+            
+    </div>
+            <footer class="d-flex justify-content-center align-items-center py-3">
+                <p class="fs-5 col12">Desarrollado por Wakutec, 2023</p>
             </footer>
 
         </main>

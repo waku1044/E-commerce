@@ -1,9 +1,9 @@
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding:0 1rem;
+
+.logo{
+    width: 30%;
+    min-width: 200px;
 }
+
 .lupita{
     width: 17px;
     height: 17px;
