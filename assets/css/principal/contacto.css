@@ -1,0 +1,8 @@
+.contacto{
+    
+    background: var(--fondo_oscuro);
+}
+.contacto input,textarea{
+    width: 100%;
+    min-width: 150px;
+}
