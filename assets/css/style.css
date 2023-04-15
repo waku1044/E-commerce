@@ -25,10 +25,13 @@ section{
 placeholder{
     color: var(--placeholder);
 }
-/* .card{
-    width: 510;
-    margin:.5rem;
-} */
-/* .card img{
+.card{
+    width:50px;
+    min-width: 250px;
+    
+}
+.card img{
+    min-width: 250px;
+    height: 250px;
     width: 100%;
-} */
+} 
