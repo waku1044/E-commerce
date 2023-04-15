@@ -2,5 +2,6 @@
     background: var(--fondo_medio); 
 }
 .inicioSesion input{
-    min-width: 150px;
+    max-width: 300px;
+    border: none;
 }

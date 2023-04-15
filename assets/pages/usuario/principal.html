@@ -14,14 +14,16 @@
 <body>
     <div class="container-fluid">
 
-        <header class="row d-flex justify-content-between align-items-center py-3">
-            <img src="../../img/Logo.svg" class="col-4 img-fluid">
-            <!-- <input type="search" placeholder="¿Que desea buscar?"> -->
-            <button class="col-4 btn btn-outline-primary ">Login</button>
-            <img src="../../img/lupa.png" alt="lupita" class="col-4 header_lupa me-1">
+        <header class="row d-flex justify-content-between align-items-center p-3 ">
+            <img src="../../img/Logo.svg" class="col-4 img-fluid ms-3">
+            <div class="buscador col-5 mb-3">
+                <input type="search" placeholder="¿Que desea buscar?" class="col-8 py-3 rounded-pill px-3">
+                <!-- <button class="col-4 header_lupa me-1 border border-0"><img src="/assets/img/icomoon/fonts/icomoon.svg" alt=""></button> -->
+            </div>
+            <button class="col-2 btn btn-outline-primary " data-login>Login</button>
         </header>
-        <div class="row py-3 banner">
-            <img src="../img_principal/banner/Hero.png" alt="promocion1" class="col-12 img-fluid">
+        <div class="row py-3 banner d-flex justify-content-center">
+            <img src="../img_principal/banner/Hero.png" alt="promocion1" class="col-12 w-75 h-25 img-fluid">
         </div>
         <section class="starWars row py-4">
                 <div class="principal d-flex justify-content-between">
@@ -29,8 +31,8 @@
                     <button type="text" class="star_btn btn btn-outline-primary">Ver todo &#8594</button>
 
                 </div>
-                <article class="imagenes d-flex justify-content-around flex-wrap py-3">
-                    <div class="card ">
+                <article class="imagenes d-flex justify-content-around flex-wrap py-3 ">
+                    <div class="card mb-3">
                         <img src="../img_principal/skill/Skill1.png" alt="producto" class="producto card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">Producto XYZ</h5>
@@ -38,7 +40,7 @@
                                 <a href="" class="verProducto btn btn-primary">Ver producto</a>
                             </div>
                     </div>
-                    <div class="card">
+                    <div class="card mb-3">
                         <img src="../img_principal/skill/Skill2.png" alt="producto" class="producto card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Producto XYZ</h5>
@@ -71,7 +73,7 @@
                 <button type="text" class="consola_btn btn btn-outline-primary col-5">Ver todo &#8594</button>
             </div>
             <article class="imagenes d-flex justify-content-around flex-wrap py-3">
-                <div class="card">
+                <div class="card mb-3">
                     <img src="../img_principal/juegos/juego.png" alt="producto" class="producto card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Producto XYZ</h5>
@@ -79,7 +81,7 @@
                             <a href="" class="verProducto btn btn-primary">Ver producto</a>
                         </div>
                 </div>
-                <div class="card">
+                <div class="card mb-3">
                     <img src="../img_principal/juegos/juego1.png" alt="producto" class="producto card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Producto XYZ</h5>
@@ -111,8 +113,8 @@
              <h2 class="diversos_title col-7 gx-3">Diversos</h2>
              <button type="text" class="diversos_btn btn btn-outline-primary col-5 gap-5">Ver todo &#8594</button>
          </div>   
-        <article class="imagenes d-flex justify-content-around flex-wrap py-3">
-            <div class="card">
+         <article class="imagenes d-flex justify-content-around flex-wrap py-3">
+            <div class="card mb-3">
                 <img src="../img_principal/diversos/diverso.png" alt="producto" class="producto card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Producto XYZ</h5>
@@ -120,7 +122,7 @@
                         <a href="" class="verProducto btn btn-primary">Ver producto</a>
                     </div>
             </div>
-            <div class="card">
+            <div class="card mb-3">
                 <img src="../img_principal/diversos/diverso2.png" alt="producto" class="producto card-img-top">
                 <div class="card-body">
                     <h5 class="card-title">Producto XYZ</h5>
@@ -159,9 +161,9 @@
     </div>
         <div class="contacto_contenido col-12 col-md-6 d-flex flex-column justify-content-start">
             <h2 class="contacto_titulo py-4">Hable con nosotros</h2>
-            <input type="text" class="contacto_input my-3 px-2" placeholder="Nombre">
-            <textarea name="mensaje" class="contacto_textarea my-3 p-2" id="mensaje"  placeholder="Escribe tu mensaje"></textarea>
-            <button class="contacto_btn btn btn-primary">Enviar Mensaje</button>
+            <input type="text" class="contacto_input my-3 p-2 w-75 border border-0" placeholder="Nombre">
+            <textarea name="mensaje" class="contacto_textarea my-3 p-2 w-75" id="mensaje"  placeholder="Escribe tu mensaje"></textarea>
+            <button class="contacto_btn btn btn-primary w-75">Enviar Mensaje</button>
         </div>
 </div>
 
@@ -170,10 +172,6 @@
     <p class="col-12 d-flex justify-content-center align-items-center p-3">Desarrollado por Wakutec, 2023</p>
 </footer>
     </div>
-    
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-
-</body>
+        <script src="principaljs.js"></script>
+    </body>
 </html>

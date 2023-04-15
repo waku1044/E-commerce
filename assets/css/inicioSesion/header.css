@@ -5,6 +5,9 @@
 }
 
 .lupita{
-    width: 17px;
-    height: 17px;
+    width: 100%;
+   
+}
+.buscador{
+    min-width: 300px;
 }
