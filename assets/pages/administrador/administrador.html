@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,31 +17,35 @@
 <body>
     <div class="container-fluid">
 
-        <header class="row d-flex justify-content-between align-items-center py-3">
-            <img src="../../img/Logo.svg" alt="Logo" class="col-12 col-md-4 img-fluid">
-            <input type="search" placeholder="¿Que desea buscar?" class="col-6 col-md-4 rounded-pill p-2 ms-2">
-            <button class="col-6 col-md-4 btn btn-outline-primary rounded-pill w-25 fs-6 me-3" data-btn-admin>Admin</button>
+        <header class="row d-flex justify-content-around align-items-center py-3">
+            <img src="../../img/Logo.svg" alt="Logo" class="col-12 col-md-6 img-fluid">
+            <!-- <input type="search" placeholder="¿Que desea buscar?" class="col-6 col-md-4 rounded-pill p-2 ms-2"> -->
+            <button class="col-10 col-md-6 btn btn-outline-primary rounded-pill  me-3" data-btn-admin>Administrador</button>
             <!-- <img src="../../img/lupa.png" alt="lupita" class="col-4 col-md-6 header_lupa"> -->
         </header>
 
         <section class="agregar_producto row mx-3">
             <h2 class="agregar_title col-12  py-3">Agregar nuevo producto</h2>
-            <article class="agregar_detalles row d-flex flex-around">
-                <input type="url" class="agregar_url my-2 border-buttom p-2" placeholder="URL de la imagen">
-                <select value="categoria" class="my-2">
-                    Categoria
-                    <option name="starWars" id="starWars" class="categoria">Star Wars</option>
-                    <option name="consola" id="consola" class="categoria">Consola</option>
-                    <option name="diversos" id="diverso" class="categoria">Diversos</option>
-
-
-                </select>
-
-                <input type="text" class="nombre_producto my-2 p-2" placeholder="Nombre del producto">
-                <input type="number" class="precio my-2 p-2" placeholder="Precio del producto">
-                <textarea name="descripcion del producto" id="descripcionProducto"  class="descripcion my-2 p-2" placeholder="Descripcion del producto"></textarea>
-                <buttom class="agregar btn btn-primary my-3">Agregar Producto</buttom>
-            </article>
+            <form action="" class="agregar_detalles row d-flex flex-around" data-form>
+                <input 
+                type="img" 
+                class="agregar_url my-2 border-buttom p-2" 
+                placeholder="URL de la imagen"
+                required 
+                data-url-img>
+                <select class="my-2 p-2" data-categoria>
+                    <option value="">Selecciona una categoria</option>
+                    <option name="categoria" value="Star Wars" class="categoria">Star Wars</option>
+                    <option name="categoria" value="Consola" class="categoria">Consola</option>
+                    <option name="categoria" value="Diversos" class="categoria">Diversos</option>
+                </select></h5>
+    
+                <input type="text" class="nombre_producto my-2 p-2" placeholder="Nombre del producto" required data-nombre-producto>
+                <input type="number" class="precio my-2 p-2" placeholder="Precio del producto" required data-precio>
+                <textarea name="descripcion del producto" id="descripcionProducto"  class="descripcion my-2 p-2" placeholder="Descripcion del producto" required data-descripcion></textarea>
+                <button  type="submit" class="agregar btn btn-primary my-3">Agregar Producto</button>
+                
+            </form>            
         </section>
         
         
@@ -67,6 +71,7 @@
         </footer>
     </div>
     <script src="../../js/ingreso_admin.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/assets/pages/administrador/administrador.js"></script>
 </body>
 </html>

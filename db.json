@@ -1,0 +1,94 @@
+{
+  "star": [
+    {
+      "id": 1,
+      "img": "../img_principal/skill/Skill1.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00"
+    },
+    {
+      "id": 2,
+      "img": "../img_principal/skill/Skill2.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00"
+    },
+    {
+      "id": 3,
+      "img": "../img_principal/skill/Skill3.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00"
+    },
+    {
+      "id": 4,
+      "img": "../img_principal/skill/Skill4.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00"
+    },
+    {
+      "img": "http://3.bp.blogspot.com/-EPayaoS29yY/URP7_xYAw9I/AAAAAAAAANI/JP6rpLc3CbQ/s1600/casas-2201.jpg",
+      "titulo": "casa",
+      "precio": "50000000",
+      "descripcion": "linda casa",
+      "id": "fcd10bcc-b692-4c80-b321-9f9c95c01485"
+    }
+  ],
+  "consolas": [
+    {
+      "id": 1,
+      "img": "../img_principal/juegos/juego.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00"
+    },
+    {
+      "id": 2,
+      "img": "../img_principal/juegos/juego1.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00"
+    },
+    {
+      "id": 3,
+      "img": "../img_principal/juegos/juego2.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00"
+    },
+    {
+      "id": 4,
+      "img": "../img_principal/juegos/juego3.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00"
+    }
+  ],
+  "varios": [
+    {
+      "id": 1,
+      "img": "../img_principal/diversos/diverso.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00"
+    },
+    {
+      "id": 2,
+      "img": "../img_principal/diversos/diverso2.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00"
+    },
+    {
+      "id": 3,
+      "img": "../img_principal/diversos/diverso3.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00"
+    },
+    {
+      "id": 4,
+      "img": "../img_principal/diversos/diverso4.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00"
+    },
+    {
+      "img": "https://1.bp.blogspot.com/-k_TWs9C-peo/Xl-o9ywZqcI/AAAAAAAAM74/92ovyvlOhOonIt6a9D5p8NGrPiZPFlZ5ACLcBGAsYHQ/s1600/5b6511ff4a8790f0c597a0e5c842cef2.png",
+      "titulo": "Mario bros",
+      "precio": "700",
+      "descripcion": "Mario bros sin luigy",
+      "id": "a534c6f5-ba64-4f94-9c69-2f8f6cf9edef"
+    }
+  ]
+}
