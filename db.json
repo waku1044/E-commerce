@@ -1,0 +1,92 @@
+{
+  "star": [
+    {
+      "id": "5b407599-a2ff-4f96-96ea-ccc8023588e4",
+      "img": "../img_principal/skill/Skill1.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00",
+      "descripcion": ""
+    },
+    {
+      "id": "fa083a6c-b165-4c70-afcf-b242787a6ced",
+      "img": "../img_principal/skill/Skill2.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00",
+      "descripcion": ""
+    },
+    {
+      "id": "5e3b32c4-ab52-45e9-bae2-65178d089594",
+      "img": "../img_principal/skill/Skill3.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00",
+      "descripcion": ""
+    },
+    {
+      "id": "515451a7-e234-407f-bd36-cc62c32830a9",
+      "img": "../img_principal/skill/Skill4.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00",
+      "descripcion": ""
+    }
+  ],
+  "consolas": [
+    {
+      "id": "4d805bcc-8b3b-4ab5-8e9c-534bf4981a21",
+      "img": "../img_principal/juegos/juego.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00",
+      "descripcion": ""
+    },
+    {
+      "id": "68e18251-0b62-4cf3-a7f0-0839e4a75707",
+      "img": "../img_principal/juegos/juego1.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00",
+      "descripcion": ""
+    },
+    {
+      "id": "5567a170-06a1-4723-94f7-75729e24b884",
+      "img": "../img_principal/juegos/juego2.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00",
+      "descripcion": ""
+    },
+    {
+      "id": "1b4de8fc-ab97-482a-a161-e3fc2702c15c",
+      "img": "../img_principal/juegos/juego3.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00",
+      "descripcion": ""
+    }
+  ],
+  "varios": [
+    {
+      "id": "0e5f2198-93c4-487d-8dc6-0e51b134fca9",
+      "img": "../img_principal/diversos/diverso.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00",
+      "descripcion": ""
+    },
+    {
+      "id": "0d986774-842d-4838-8db5-4a5ac3c090e3",
+      "img": "../img_principal/diversos/diverso2.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00",
+      "descripcion": ""
+    },
+    {
+      "id": "30eddf8c-48be-4c46-ba42-86a57a43e233",
+      "img": "../img_principal/diversos/diverso3.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00",
+      "descripcion": ""
+    },
+    {
+      "id": "e2d5fc9a-f1b7-4610-8cf2-9b2b9b28ea06",
+      "img": "../img_principal/diversos/diverso4.png",
+      "titulo": "Producto XYZ",
+      "precio": "60.00",
+      "descripcion": ""
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "e_commerce",
+  "version": "1.0.0",
+  "description": "Mercado Digital",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Walter Gimenez",
+  "license": "ISC",
+  "type":"module"
+}

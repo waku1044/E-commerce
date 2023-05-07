@@ -1,14 +1,21 @@
-const btn_agregar = document.querySelector('[data-btn-agregar]');
-const volverLogin = document.querySelector('[data-login]');
+import { service } from "../../server/server.js";
+import{ mostrar } from '../../js/mostrar.productos.js';
 
-function volverPagina(){
-    window.location.href = './administrador.html';
-};
 
-function volverLogini(){
-    
-    window.location.href = '../../../index.html';
-};
+const categoriaStar = document.querySelector('[data-articulo-star]');
+const categoriaConsola = document.querySelector('[data-articulo-consola]');
+const categoriaVarios = document.querySelector('[data-articulo-varios]');
 
-btn_agregar.addEventListener('click', volverPagina);
-volverLogin.onclick = volverLogini;
+
+
+
+console.log('Estamos en la pagina de productos del administrador')
+//Muestra producto en page administrador
+service.mostrarProductos(categoriaStar.id).then(data => data.forEach(ele => categoriaStar.appendChild(mostrar.crearUnaCard(ele.img,ele.titulo,ele.precio,true,ele.id))));
+service.mostrarProductos(categoriaConsola.id).then(data => data.forEach(ele => categoriaConsola.appendChild(mostrar.crearUnaCard(ele.img,ele.titulo,ele.precio,true,ele.id))));
+service.mostrarProductos(categoriaVarios.id).then(data => data.forEach(ele => categoriaVarios.appendChild(mostrar.crearUnaCard(ele.img,ele.titulo,ele.precio,true,ele.id))));
+
+
+
+
+
