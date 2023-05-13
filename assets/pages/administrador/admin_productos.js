@@ -2,19 +2,28 @@ import { service } from "../../server/server.js";
 import{ mostrar } from '../../js/mostrar.productos.js';
 
 
-const categoriaStar = document.querySelector('[data-articulo-star]');
-const categoriaConsola = document.querySelector('[data-articulo-consola]');
-const categoriaVarios = document.querySelector('[data-articulo-varios]');
+const star_wars = document.querySelector('[data-articulo-star]');
+const consola = document.querySelector('[data-articulo-consola]');
+const varios = document.querySelector('[data-articulo-varios]');
 
-
-
-
+const derivaProducto = (prod,categoria)=>{
+    let card;
+    if(categoria == 'star'){
+            card = mostrar.crearUnaCard(prod.img,prod.titulo,prod.precio,true,prod.id);
+            star_wars.appendChild(card);
+        }else if(categoria == 'consola'){
+            card = mostrar.crearUnaCard(prod.img,prod.titulo,prod.precio,true,prod.id);
+            consola.appendChild(card)
+        }else{
+            card = mostrar.crearUnaCard(prod.img,prod.titulo,prod.precio,true,prod.id);
+            varios.appendChild(card)
+        }
+}
 console.log('Estamos en la pagina de productos del administrador')
 //Muestra producto en page administrador
-service.mostrarProductos(categoriaStar.id).then(data => data.forEach(ele => categoriaStar.appendChild(mostrar.crearUnaCard(ele.img,ele.titulo,ele.precio,true,ele.id))));
-service.mostrarProductos(categoriaConsola.id).then(data => data.forEach(ele => categoriaConsola.appendChild(mostrar.crearUnaCard(ele.img,ele.titulo,ele.precio,true,ele.id))));
-service.mostrarProductos(categoriaVarios.id).then(data => data.forEach(ele => categoriaVarios.appendChild(mostrar.crearUnaCard(ele.img,ele.titulo,ele.precio,true,ele.id))));
+service.mostrarProductos().then(data => data.forEach(ele => derivaProducto(ele,ele.categoria)));
 
+ 
 
 
 
