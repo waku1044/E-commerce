@@ -5,7 +5,9 @@ const btn = document.querySelector('[data-btn]');
 
 
 function ingreso(){
-    if(usuario.value === 'usuario' && contraseña.value === 'usuario'){
+    let user = localStorage.getItem('usuario');
+    let pass = localStorage.getItem('contraseña');
+    if(usuario.value === user && contraseña.value === pass){
         window.location.href = './assets/pages/usuario/principal.html';
     }else if(usuario.value === 'admin' && contraseña.value === 'admin'){
         window.location.href = './assets/pages/administrador/administrador.html';
