@@ -12,7 +12,7 @@
     <title>AluraGeek</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
 
         <header class="row d-flex justify-content-between align-items-center p-3 ">
             <img src="../../img/Logo.svg" class="img col-12 col-md-4">
@@ -20,34 +20,82 @@
             <a href="/index.html" class="btn btn-outline-primary rounded-pill  col-6 col-md-4 w-25">Login</a>
         </header>
         
-        <div class="row py-3 banner d-flex justify-content-center">
-            <img src="../img_principal/banner/Hero.svg" alt="promocion1" class="col-12 w-100 h-25 img-fluid">
-        </div>
+        <div class="banner">
+            <!-- <img src="" alt="promocion1" class="">-->
+        </div> 
         <section class="starWars row py-4">
                 <div class="principal d-flex justify-content-between">
                     <h2 class="star_titulo col-7">Star Wars</h2>
                     <button type="text" class="star_btn btn btn-outline-primary">Ver todo &#8594</button>
 
                 </div>
-                <article class="imagenes d-flex justify-content-between flex-wrap py-3" id="star" data-articulo-star>
+                <article class="imagenes d-flex gap-5 flex-wrap py-3" id="star" data-articulo-star>
+                    <div class="card my-2 col-2 col-md-4 col-lg-4" style="width:165px">
+                        <img src='../img_principal/skill/Skill1.png' alt="producto" style='height:200px' class="producto card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Producto XYZ</h5>
+                                <p class="card-text">$<strong>60.00</strong></p>
+                                <a href="" class="verProducto btn btn-primary">Ver producto</a>
+                            </div>
+                    </div>
+                    <div class="card my-2 col-2 col-md-4 col-lg-4" style="width:165px">
+                        <img src='../img_principal/skill/Skill2.png' alt="producto" style='height:200px' class="producto card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Producto XYZ</h5>
+                                <p class="card-text">$<strong>60.00</strong></p>
+                                <a href="" class="verProducto btn btn-primary">Ver producto</a>
+                            </div>
+                    </div>
                 </article>
         </section>
         
         <section class="consola row">
             <div class="principal d-flex justify-content-between">
                 <h2 class="consola_title col-7">Consola</h2>
-                <button type="text" class="consola_btn btn btn-outline-primary col-5">Ver todo &#8594</button>
+                <button type="text" class="consola_btn btn btn-outline-primary">Ver todo &#8594</button>
             </div>
-            <article class="imagenes d-flex justify-content-between flex-wrap py-3" id="consola" data-articulo-consola>
+            <article class="imagenes d-flex gap-5 flex-wrap py-3" id="consola" data-articulo-consola>
+                <div class="card my-2 col-2 col-md-4 col-lg-4" style="width:165px">
+                    <img src='../img_principal/juegos/juego.png' alt="producto" style='height:200px' class="producto card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto XYZ</h5>
+                            <p class="card-text">$<strong>60.00</strong></p>
+                            <a href="" class="verProducto btn btn-primary">Ver producto</a>
+                        </div>
+                </div>
+                <div class="card my-2 col-2 col-md-4 col-lg-4" style="width:165px">
+                    <img src='../img_principal/juegos/juego1.png' alt="producto" style='height:200px' class="producto card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto XYZ</h5>
+                            <p class="card-text">$<strong>60.00</strong></p>
+                            <a href="" class="verProducto btn btn-primary">Ver producto</a>
+                        </div>
+                </div>
             </article>
         </section>
 
         <section class="diversos row">
             <div class="principal d-flex justify-content-between">
               <h2 class="diversos_title col-7">Diversos</h2>
-              <button type="text" class="diversos_btn btn btn-outline-primary col-5 gap-5">Ver todo &#8594</button>
+              <button type="text" class="diversos_btn btn btn-outline-primary">Ver todo &#8594</button>
             </div>   
-         <article class="imagenes d-flex justify-content-between flex-wrap py-3" id="varios" data-articulo-varios>
+         <article class="imagenes d-flex gap-5 flex-wrap py-3" id="varios" data-articulo-varios>
+            <div class="card my-2 col-2 col-md-4 col-lg-4" style="width:165px">
+                <img src='../img_principal/diversos/diverso.png' alt="producto" style='height:200px' class="producto card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto XYZ</h5>
+                        <p class="card-text">$<strong>60.00</strong></p>
+                        <a href="" class="verProducto btn btn-primary">Ver producto</a>
+                    </div>
+            </div>
+            <div class="card my-2 col-2 col-md-4 col-lg-4" style="width:165px">
+                <img src='../img_principal/diversos/diverso2.png' alt="producto" style='height:200px' class="producto card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto XYZ</h5>
+                        <p class="card-text">$<strong>60.00</strong></p>
+                        <a href="" class="verProducto btn btn-primary">Ver producto</a>
+                    </div>
+            </div>
          </article>
     
         </section>
