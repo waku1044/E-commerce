@@ -55,6 +55,46 @@
       "descripcion": "",
       "categoria": "consola",
       "id": "dce6a139-311b-47cd-af1b-c9eab420af69"
+    },
+    {
+      "img": "https://www.cinepremiere.com.mx/wp-content/uploads/2020/07/super_mario_bros2.jpg",
+      "titulo": "Mario Bros",
+      "precio": "1999",
+      "descripcion": "Todo un Mario",
+      "categoria": "consola",
+      "id": "648d5292-9f25-4579-ac80-1e15e66b9411"
+    },
+    {
+      "img": "http://images.indulgexpress.com/uploads/user/imagelibrary/2017/11/15/original/Supermario.jpg",
+      "titulo": "qweqweqw",
+      "precio": "23423",
+      "descripcion": "fsdf",
+      "categoria": "consola",
+      "id": "f05d4028-045d-47b2-acdb-6f7c7fa1e495"
+    },
+    {
+      "img": "https://1.bp.blogspot.com/-ajpsltEOHl8/Wn2bKw3hTpI/AAAAAAAIBqc/IqHLRJSsE4oY9LEAhas-MFeJvnoUZyFhACLcBGAs/s1600/Mario-Transparent-PNG.png",
+      "titulo": "asdqwqdwa",
+      "precio": "234",
+      "descripcion": "",
+      "categoria": "consola",
+      "id": "b523f7a1-37a2-4f2d-a826-35fbb350aa66"
+    },
+    {
+      "img": "http://reparacionconsolasgetafe.es/wp-content/uploads/2015/08/MarioBross-1.jpg",
+      "titulo": "wqreqweeqw",
+      "precio": "2423",
+      "descripcion": "",
+      "categoria": "consola",
+      "id": "66df84b9-6a9b-4f17-af42-e142d3cea76b"
+    },
+    {
+      "img": "http://aboutsupermariobros.files.wordpress.com/2011/01/mario-1.jpg",
+      "titulo": "sdfsdfd",
+      "precio": "4324",
+      "descripcion": "",
+      "categoria": "consola",
+      "id": "b4616a2d-e90d-49ce-b20e-edd686b0fc89"
     }
   ]
 }

@@ -5,6 +5,9 @@ console.log('Pagina de productos de Cliente')
 const star_wars = document.querySelector('[data-articulo-star]');
 const consola = document.querySelector('[data-articulo-consola]');
 const varios = document.querySelector('[data-articulo-varios]');
+const user = document.querySelector('[data-user]');
+
+user.innerText = 'Salir';
 
 const derivaProducto = (prod,categoria)=>{
     let card;

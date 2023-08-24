@@ -54,4 +54,4 @@ function validarPassword(){
 }
         
     
-    btn_registro.addEventListener('click',handleSubmit)
+btn_registro.addEventListener('click',handleSubmit)

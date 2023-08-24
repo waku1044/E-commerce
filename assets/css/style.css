@@ -4,8 +4,8 @@
     --fondo_oscuro:#EAF2FD;
     --azul:#2A7AE4;
     --titulos:#464646;
-    --placeholder:#A2A2A2;
-    --letras:'Raleway',sans-serif;
+    --placeholder:#A2A0AA;
+    --letras:'Raleway','sans-serif';
 }
 *{
     margin: 0;
@@ -22,16 +22,10 @@
 section{
     background: var(--fondo_oscuro);
 }
-placeholder{
+input{
+    padding: 5px 10px;
+}
+::placeholder{
+    
     color: var(--placeholder);
 }
-/* .card{
-    width:50px;
-    min-width: 250px;
-    
-}
-.card img{
-    min-width: 250px;
-    height: 250px;
-    width: 100%;
-}  */
