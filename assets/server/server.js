@@ -1,7 +1,7 @@
 
 //GET
 //Mostrar los productos en categoria 
-
+export const saludo = 'Hola, estas en la ruta correcta';
 const mostrarProductos = ()=>{    
 return fetch(`http://localhost:3000/productos`)
 .then(response=> response.json())
@@ -16,15 +16,16 @@ const detalleProducto = (id)=>{
 //POST
 //AGREGAR PRODUCTOOS AL SERVIDOR
 // Se agregar los productos al back
-function agregarProductos(img, titulo, precio, descripcion,categoria) {
-    return fetch(`http://localhost:3000/productos`, {
+function agregarProductos(img, nombre, precio, descripcion,categoria) {
+    return fetch(`http://localhost:3000/api/agregarproducto`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({ img, titulo, precio, descripcion,categoria, id: uuid.v4() })
+        body: JSON.stringify({ img, nombre, precio, descripcion,categoria, idproducto: uuid.v4() })
     })
-        .catch(err => alert(err));
+    // .them(response => response.json())
+    .catch(err => alert(err));
 };
  
 const actualizar = (img,titulo,precio,descripcion,categoria,id)=>{
@@ -55,6 +56,7 @@ export const service =  {
     mostrarProductos,
     agregarProductos,
     eliminarProducto,
-    actualizar
+    actualizar,
+    saludo
     
 };

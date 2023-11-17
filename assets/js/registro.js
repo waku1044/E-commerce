@@ -1,5 +1,8 @@
 const  btn_registro = document.querySelector('[data-btn-registro]');
+const $usuario = document.querySelector('[data-usuario]');
 
+
+$usuario.focus()
     
 function handleSubmit (){
         let msj = '---Corrija los siguientes campos---\n';
@@ -24,7 +27,7 @@ function handleSubmit (){
             let pass = document.querySelector('[data-contraseña]').value;
             localStorage.setItem('usuario',user);
             localStorage.setItem('contraseña',pass);
-            window.location.href = '../../../../index.html'
+            window.location.href = '../../../index.html';
         }
 }  
 function repeat(){

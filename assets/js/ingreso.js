@@ -3,7 +3,7 @@ const contraseña = document.querySelector('[data-contraseña]');
 const btn = document.querySelector('[data-btn]');
 
 
-
+usuario.focus()
 function ingreso(){
     let user = localStorage.getItem('usuario');
     let pass = localStorage.getItem('contraseña');
