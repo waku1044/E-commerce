@@ -10,6 +10,7 @@ function ingreso(){
     if(usuario.value === user && contraseña.value === pass){
         window.location.href = './assets/pages/usuario/principal.html';
     }else if(usuario.value === 'admin' && contraseña.value === 'admin'){
+        localStorage.setItem('usuario','admin');
         window.location.href = './assets/pages/administrador/administrador.html';
     }else{
         alert('Usuario o contraseña incorrecto.')

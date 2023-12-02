@@ -2,6 +2,14 @@ import { service } from '../server/server.js';
 
 const form = document.querySelector('[data-form]');
 
+const btn_admin = document.querySelector('[data-btn-admin]');
+
+// btn de administrado vuelve papaera ver los productos
+function ingresar(){
+    window.location.href = './admin_productos.html'
+}
+btn_admin.addEventListener('click',ingresar);
+
 
 const obtenerInfo = ()=>{
     const url = new URL(window.location);
@@ -18,9 +26,10 @@ const obtenerInfo = ()=>{
     
     service.detalleProducto(id).then(perfil=> {
         img.value = perfil.img;
-        nombre.value = perfil.titulo;
+        nombre.value = perfil.nombre;
         precio.value = perfil.precio;
         descripcion.value = perfil.descripcion;
+        // console.log(perfil)
     });
     form.addEventListener('submit',(e)=>{
         e.preventDefault();
@@ -30,22 +39,22 @@ const obtenerInfo = ()=>{
         const nombre = document.querySelector('[data-producto]').value;
         const precio = document.querySelector('[data-precio]').value;
         const descripcion = document.querySelector('[data-descripcion]').value;
-        let cate;
+        
         switch(categoria){
             case 'Star Wars':
-                cate = 'star';
-                service.actualizar(img,nombre,precio,descripcion,cate,id);
+                
+                service.actualizar(img,nombre,precio,descripcion,categoria,id);
                 window.location.href = '../administrador/admin_productos.html';
                 break;
             case 'Consola':
-                cate = 'consola';
-                service.actualizar(img,nombre,precio,descripcion,cate,id);
+                
+                service.actualizar(img,nombre,precio,descripcion,categoria,id);
                 window.location.href = '../administrador/admin_productos.html';
 
                 break;
             case 'Diversos':
-                cate = 'varios';
-                service.actualizar(img,nombre,precio,descripcion,cate,id)
+                
+                service.actualizar(img,nombre,precio,descripcion,categoria,id)
                 window.location.href = '../administrador/admin_productos.html';
 
                  break;

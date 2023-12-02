@@ -8,5 +8,8 @@
   },
   "author": "Walter Gimenez",
   "license": "ISC",
-  "type":"module"
+  "type": "module",
+  "dependencies": {
+    "uuid": "^9.0.1"
+  }
 }

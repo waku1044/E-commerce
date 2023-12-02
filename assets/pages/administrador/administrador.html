@@ -26,13 +26,19 @@
 
         <section class="agregar_producto row mx-3">
             <h2 class="agregar_title col-12  py-3">Agregar nuevo producto</h2>
-            <form action="" class="agregar_detalles row d-flex flex-around" data-form>
-                <input 
-                type="url" 
-                class="agregar_url my-2 border-buttom p-2" 
-                placeholder="URL de la imagen"
-                required 
-                data-url-img>
+            <form action="" class="agregar_detalles row d-flex flex-around" enctype="multipart/form-data" data-form>
+                <div class="">
+
+                    <input 
+                    type="url" 
+                    name="imagen"
+                    class="agregar_url my-2 border-buttom p-2 col-9" 
+                    placeholder="URL de la imagen"
+                    required 
+                    data-url-img>
+                    <img src="../../img/sinphoto.webp" class="col-2" style="width: 15rem;" alt="img-cargada" id="img">
+                </div>
+                
                 <select class="my-2 p-2" data-categoria>
                     <option value="">Selecciona una categoria</option>
                     <option name="categoria" value="Star Wars" class="categoria">Star Wars</option>

@@ -1,3 +1,7 @@
+import {saludo, service} from "../server/server.js";
+
+
+
 const  btn_registro = document.querySelector('[data-btn-registro]');
 const $usuario = document.querySelector('[data-usuario]');
 
@@ -25,6 +29,9 @@ function handleSubmit (){
             alert('Registro Existoso.');
             let user = document.querySelector('[data-usuario]').value;
             let pass = document.querySelector('[data-contraseña]').value;
+            let fecha = new Date().toLocaleDateString();
+            let hora = new Date().toLocaleTimeString();
+            service.agregarusuario(user,pass,fecha,hora)
             localStorage.setItem('usuario',user);
             localStorage.setItem('contraseña',pass);
             window.location.href = '../../../index.html';
