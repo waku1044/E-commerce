@@ -4,7 +4,7 @@
   "description": "Mercado Digital",
   "main": "index.js",
   "scripts": {
-    "dev": "json-server --watch db.json"
+    "dev": "index.html"
   },
   "author": "Walter Gimenez",
   "license": "ISC",

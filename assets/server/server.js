@@ -7,6 +7,10 @@ const mostrarProductos = async ()=>{
     const response = await fetch(`http://localhost:3000/api/mostrarproductos`);
     return await response.json();
 };
+const extraerUsuarios = async ()=>{
+    const response = await fetch(`http://localhost:3000/api/mostrarusuario`);
+    return await response.json();
+}
 
 // Detalle de producto solo se aplica cuando el administrador entras en editar
 const detalleProducto = async (id)=>{
@@ -17,14 +21,14 @@ const detalleProducto = async (id)=>{
 
 
 //POST
-const agregarusuario = async (user,pass)=>{
+async function agregarusuario (user,pass){
     try {
         return await fetch(`http://localhost:3000/api/agregarusuario`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ user, pass, fecha: new Date().toLocaleDateString(), hora: new Date().toLocaleTimeString(),idusuario: uuid.v4() })
+            body: JSON.stringify({ user, pass,idusuario: uuid.v4(), fecha: new Date().toLocaleDateString(), hora: new Date().toLocaleTimeString() })
         });
     } catch (err) {
         return alert(err);
@@ -78,6 +82,7 @@ export const service =  {
     eliminarProducto,
     actualizar,
     agregarusuario,
+    extraerUsuarios,
     saludo
     
 };

@@ -1,4 +1,4 @@
-import {saludo, service} from "../server/server.js";
+import { service} from "../server/server.js";
 const $section = document.querySelector('[data-section]');
 const $categoria = document.querySelector('[data-categoria]');
 const $user = document.querySelector('[data-user]');
