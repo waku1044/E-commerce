@@ -31,7 +31,9 @@ function handleSubmit (){
             let pass = document.querySelector('[data-contraseña]').value;
             let fecha = new Date().toLocaleDateString();
             let hora = new Date().toLocaleTimeString();
-            service.agregarusuario(user,pass,fecha,hora)
+            // service.agregarusuario(user,pass,fecha,hora)
+            localStorage.setItem('usuario',user);
+            localStorage.setItem('contraseña',pass);
             window.location.href = '../../../index.html';
         }
 }  
