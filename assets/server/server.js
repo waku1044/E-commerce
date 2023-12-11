@@ -1,4 +1,4 @@
-const  API_URL = 'https://e-commerce-waku1044.vercel.app/';
+const  API_URL = 'https://e-commerce-waku1044.vercel.app';
 //GET
 //Mostrar los productos en categoria 
 export const saludo = 'Hola, estas en la ruta correcta';
