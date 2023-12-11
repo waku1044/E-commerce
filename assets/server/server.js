@@ -8,7 +8,13 @@ const mostrarProductos = async ()=>{
     return await response.json();
 };
 const extraerUsuarios = async ()=>{
-    const response = await fetch(`${API_URL}/api/mostrarusuario`);
+    const response = await fetch(`${API_URL}/api/mostrarusuario`,{
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ user, pass})
+    });
     return await response.json();
 }
 
