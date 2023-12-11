@@ -1,20 +1,20 @@
-
+const  API_URL = 'https://e-commerce-waku1044.vercel.app/';
 //GET
 //Mostrar los productos en categoria 
 export const saludo = 'Hola, estas en la ruta correcta';
 
 const mostrarProductos = async ()=>{    
-    const response = await fetch(`http://localhost:3000/api/mostrarproductos`);
+    const response = await fetch(`${API_URL}/api/mostrarproductos`);
     return await response.json();
 };
 const extraerUsuarios = async ()=>{
-    const response = await fetch(`http://localhost:3000/api/mostrarusuario`);
+    const response = await fetch(`${API_URL}/api/mostrarusuario`);
     return await response.json();
 }
 
 // Detalle de producto solo se aplica cuando el administrador entras en editar
 const detalleProducto = async (id)=>{
-    const response = await fetch(`http://localhost:3000/api/mostrarproducto/${id}`);
+    const response = await fetch(`${API_URL}/api/mostrarproducto/${id}`);
     return await response.json();
     
 };
@@ -23,7 +23,7 @@ const detalleProducto = async (id)=>{
 //POST
 async function agregarusuario (user,pass){
     try {
-        return await fetch(`http://localhost:3000/api/agregarusuario`, {
+        return await fetch(`${API_URL}/api/agregarusuario`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -38,7 +38,7 @@ async function agregarusuario (user,pass){
 // Se agregar los productos al back
 async function agregarProductos(img, nombre, precio, descripcion,categoria) {
     try {
-        return await fetch(`http://localhost:3000/api/agregarproducto`, {
+        return await fetch(`${API_URL}/api/agregarproducto`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -51,7 +51,7 @@ async function agregarProductos(img, nombre, precio, descripcion,categoria) {
 };
 const actualizar = async (img,nombre,precio,descripcion,categoria,id)=>{
     try {
-        const response = await fetch(`http://localhost:3000/api/actualizarproducto/${id}`, {
+        const response = await fetch(`${API_URL}/api/actualizarproducto/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -69,7 +69,7 @@ const actualizar = async (img,nombre,precio,descripcion,categoria,id)=>{
 //ELIMINA PRODUCTO DEL SERVIDOR
 const eliminarProducto = (id)=>{
     
-    return fetch(`http://localhost:3000/api/eliminarproducto/${id}`,{
+    return fetch(`${API_URL}/api/eliminarproducto/${id}`,{
         method:"DELETE"
     })
 }

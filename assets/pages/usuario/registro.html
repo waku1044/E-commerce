@@ -17,35 +17,39 @@
         </header>
         <main>
             <div class="inicioSesion row">
-                <div class="inicio_ingreso d-flex flex-column justify-content-center align-items-center py-2">
+                <div class="inicio_ingreso text-center">
                     <h2 class=
                     "inicio_titulo pb-4">Registro</h2>
-                    <label for="">Usuario</label>
-                    <input type="text" 
-                    class="inicio_input col-12 p-2 mb-4 w-50"
-                    name="usuario" 
-                    placeholder="Mayor a 4 digitos" 
-                    data-usuario
-                    
-                    >
-                    <label for="">Password</label>
-                    <input type="password" 
-                    class="inicio_input col-12 p-2 mb-4 w-50"
-                    name="password" 
-                    placeholder="Mayor a 6 digitos" 
-                    data-contraseña
-                    
-                    
-                    >
-                    
-                    <input type="password" 
-                    class="inicio_input col-12 p-2 mb-4 w-50"
-                    name="repeatpassword" 
-                    placeholder="Repetir Contraseña" 
-                    data-repeat-contraseña
-                    
-                    >
-                    <button type="button" class="inicio_btn btn btn-primary col-12 w-50 font-monospace" data-btn-registro>Registrarse</button>
+
+                    <form action="" class="d-flex flex-column align-items-center">
+
+                        <label for="">Usuario</label>
+                        <input type="text" 
+                        class="inicio_input col-12 p-2  w-75"
+                        name="usuario" 
+                        placeholder="Usuario..." 
+                        data-usuario
+                        ><p class="usuario text-danger d-inline "></p>
+    
+    
+                        <label for="">Password</label>
+                        <input type="password" 
+                        class="inicio_input col-12 p-2  w-75"
+                        name="password" 
+                        placeholder="Password..." 
+                        data-contraseña
+                        ><p class="password text-danger d-inline"></p>
+                        
+                        <input type="password" 
+                        class="inicio_input col-12 p-2 w-75"
+                        name="repeatpassword" 
+                        placeholder="Repeat Password" 
+                        data-repeat-contraseña
+                        ><p class="repeatpassword text-danger d-inline"></p>
+    
+    
+                        <button type="submit" class="inicio_btn btn btn-primary col-12 w-50 font-monospace" data-btn-registro>Registrarse</button>
+                    </form>
                     <!-- <a href="#" class="text-decoration-none py-3">No estoy registrado</a> -->
                 </div>
             </div>
