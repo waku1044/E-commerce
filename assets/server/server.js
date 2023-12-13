@@ -1,4 +1,11 @@
-const  API_URL = 'https://e-commerce-waku1044.vercel.app';
+let  API_URL = {
+    dev: 'https://e-commerce-waku1044.vercel.app',
+    local: 'http://localhost:3000',
+    verficacion: false
+  }
+  API_URL.verficacion ? API_URL = API_URL.dev : API_URL = API_URL.local;
+  
+  console.log(API_URL);
 //GET
 //Mostrar los productos en categoria 
 export const saludo = 'Hola, estas en la ruta correcta';
@@ -7,13 +14,13 @@ const mostrarProductos = async ()=>{
     const response = await fetch(`${API_URL}/api/mostrarproductos`);
     return await response.json();
 };
-const extraerUsuarios = async ()=>{
-    const response = await fetch(`${API_URL}/api/mostrarusuario`,{
+const login = async (user,pass)=>{
+    const response = await fetch(`${API_URL}/api/login`,{
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({ user, pass})
+        body: JSON.stringify({user, pass})
     });
     return await response.json();
 }
@@ -27,9 +34,9 @@ const detalleProducto = async (id)=>{
 
 
 //POST
-async function agregarusuario (user,pass){
+async function registro (user,pass){
     try {
-        return await fetch(`${API_URL}/api/agregarusuario`, {
+        return await fetch(`${API_URL}/api/register`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -87,8 +94,8 @@ export const service =  {
     agregarProductos,
     eliminarProducto,
     actualizar,
-    agregarusuario,
-    extraerUsuarios,
+    registro,
+    login,
     saludo
     
 };

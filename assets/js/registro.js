@@ -5,27 +5,36 @@ const $usuario = document.querySelector("[data-usuario]");
 const pass = document.querySelector("[data-contraseña]");
 const $repeat = document.querySelector("[data-repeat-contraseña]");
 
+
+
+
+
 $usuario.focus();
 $usuario.addEventListener("change", validaTexto);
 function validar() {
   let msjUsuario = document.querySelector(".usuario");
   let msjPass = document.querySelector(".password");
-  let msjRepeat = document.querySelector(".repeatPassword");
+  let msjRepeat = document.querySelector(".repeatpassword");
   let msjErrors ={};
   console.log($usuario.value);
   if(!$usuario.value){
       msjErrors.usuario = "El usuario es requerido";
-
+      msjUsuario.innerText =  msjErrors.usuario;
       }else if (!validaTexto()) {
-    msjErrors.innerText = "El usuario debe ser mayor a 3 caracteres y menor a 11"; 
+    msjErrors.usuario = "El usuario debe ser mayor a 3 caracteres y menor a 11";
+    msjUsuario.innerText =  msjErrors.usuario; 
   }if(!pass.value){
        msjErrors.password = "La contraseña es requerida";
+       msjPass.innerText =  msjErrors.password;
   }else if (!validarPassword()) {
     msjErrors.password ="La contraseña debe ser mayor a 5 caracteres y menor a 11";
-  }if(!$repeat.value == ''){
+    msjPass.innerText =  msjErrors.password;
+  }if(!$repeat.value){
     msjErrors.repeatPassword = "La contraseña es requerida";
+    msjRepeat.innerText =  msjErrors.repeatPassword;
   }else if (!repeat()) {
-    msjErrors.repeatPassword = "No coincide la contraseña"; 
+    msjErrors.repeatPassword = "No coincide la contraseña";
+    msjRepeat.innerText =  msjErrors.repeatPassword; 
   }
   return msjErrors;
   // else{
@@ -64,13 +73,13 @@ function validarPassword() {
 const handleSubmit = (event) => {
   event.preventDefault();
   let errors = validar();
-  console.log(errors);
-  console.log(Object.values(errors).length);
   if(Object.values(validar()).length === 0){
-    return alert("Registro Existoso");
-  }else{
-    alert("Revisar los campos");
-  }
+    service.registro($usuario.value,pass.value)
+    .then(()=>{
+      alert('Registro Existoso.');
+      window.location.href = '../../../index.html';
+    })
   
-};
+  };
+}
 btn_registro.addEventListener("click", handleSubmit);

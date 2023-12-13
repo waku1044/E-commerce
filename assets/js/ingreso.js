@@ -1,4 +1,4 @@
-import { service} from "../server/server.js";
+import { service } from "../server/server.js";
 
 const usuario = document.querySelector('[data-usuario]');
 const contraseña = document.querySelector('[data-contraseña]');
@@ -12,54 +12,35 @@ btnVer.addEventListener('click',verPass)
 
 
 usuario.focus()
-async function ingreso(){
+ function ingreso(){
 
-    if(usuario.value && contraseña.value){
-        await service.extraerUsuarios()
-            .then(users => {
-                users.forEach(user =>{
-                    console.log(user)
-                    if(user.user == usuario.value && user.pass == contraseña.value){
-                        localStorage.setItem('usuario',user.user);
-                        return window.location.href = './assets/pages/usuario/principal.html';
-                    }if(usuario.value == 'admin'  && contraseña.value == 'admin'){
-                        localStorage.setItem('usuario','admin');
-                        return window.location.href = './assets/pages/administrador/administrador.html';
-                    }else{
-                        alert('Credenciales incorrectas')
-                    }
-                })
-            })  
+    const data = {
+        usuario: usuario.value,
+        contraseña: contraseña.value
+    }
+    if(usuario.value != '' && contraseña.value != ''){
+        // console.log(data)
+         service.login(data.usuario,data.contraseña)
+         .then(res=>{
+             if(res.success){
+                localStorage.setItem('usuario',res.user)
+                 window.location.href = './assets/pages/usuario/principal.html'
+
+             }else if(data.usuario == 'admin' && data.contraseña == 'admin'){
+                localStorage.setItem('usuario','admin')
+                 window.location.href = './assets/pages/administrador/administrador.html'
+
+             }else{
+                 alert(res.message)
+             }
+         })
+         
     }else{
-        alert('Campos vacios')
-}
-}
-
-//   function ingreso(){
-//     if(usuario.value && contraseña.value){
-//          service.extraerUsuarios()
-//             .then  (users => {
-//                 users.forEach(user =>{
-//                     console.log(user)
-//                     if(user.user == usuario.value && user.pass == contraseña.value){
-//                         localStorage.setItem('usuario',user.user);
-//                         return window.location.href = './assets/pages/usuario/principal.html';
-//                     }if(usuario.value == 'admin'  && contraseña.value == 'admin'){
-//                         localStorage.setItem('usuario','admin');
-//                         return window.location.href = './assets/pages/administrador/administrador.html';
-//                     }else{
-//                         alert('Credenciales incorrectas')
-//                     }
-//                 })
-//             })  
-//     }else{
-//         alert('Campos vacios')
-//     }
-//   }
-
-
-
+        alert('Por favor rellene todos los campos')
+    }
   
-    
+}
+
+
 
 btn.addEventListener('click',ingreso)
