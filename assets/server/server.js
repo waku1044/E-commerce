@@ -4,7 +4,7 @@
 //     verficacion: true
 //   }
 //   API_URL.verficacion ? API_URL = API_URL.dev : API_URL = API_URL.local;
-  let API_URL = procces.env.PORT || 'http://localhost:3000';
+  let API_URL = proccess.env.PORT || 'http://localhost:3000';
   console.log(API_URL);
 //GET
 //Mostrar los productos en categoria 
