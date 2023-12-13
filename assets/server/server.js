@@ -1,7 +1,7 @@
 let  API_URL = {
-    dev: 'https://e-commerce-waku1044.vercel.app',
+    dev: 'https://e-commerce-hhsohnme2-waku1044.vercel.app',
     local: 'http://localhost:3000',
-    verficacion: false
+    verficacion: true
   }
   API_URL.verficacion ? API_URL = API_URL.dev : API_URL = API_URL.local;
   
