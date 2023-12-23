@@ -1,10 +1,10 @@
-// let  API_URL = {
-//     dev: 'https://e-commerce-hhsohnme2-waku1044.vercel.app',
-//     local: 'http://localhost:3000',
-//     verficacion: true
-//   }
-//   API_URL.verficacion ? API_URL = API_URL.dev : API_URL = API_URL.local;
-  let API_URL = procces.env.PORT || 'http://localhost:3000';
+let  API_URL = {
+    dev: 'https://e-commerce-hhsohnme2-waku1044.vercel.app',
+    local: 'http://localhost:3000',
+    verficacion: false
+  }
+  API_URL.verficacion ? API_URL = API_URL.dev : API_URL = API_URL.local;
+//   let API_URL = procces.env.PORT || 'http://localhost:3000';
   console.log(API_URL);
 //GET
 //Mostrar los productos en categoria 

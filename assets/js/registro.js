@@ -11,6 +11,17 @@ const $repeat = document.querySelector("[data-repeat-contraseña]");
 
 $usuario.focus();
 $usuario.addEventListener("change", validaTexto);
+
+function modal(text) {
+  const dialog = document.querySelector("[data-modal]");
+  let context = `<h3>${text}.</h3>`;
+  dialog.innerHTML = context
+  dialog.showModal();
+  setTimeout(() => {
+      dialog.close();
+  }, 3000);
+  
+}
 function validar() {
   let msjUsuario = document.querySelector(".usuario");
   let msjPass = document.querySelector(".password");
@@ -76,10 +87,12 @@ const handleSubmit = (event) => {
   if(Object.values(validar()).length === 0){
     service.registro($usuario.value,pass.value)
     .then(()=>{
-      alert('Registro Existoso.');
-      window.location.href = '../../../index.html';
-    })
+      modal('Registro Existoso.');
+      setTimeout(() => {window.location.href = '../../../index.html';
+    }, 2000);})
   
+  }else{
+    modal(errors);
   };
 }
 btn_registro.addEventListener("click", handleSubmit);

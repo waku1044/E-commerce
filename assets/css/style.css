@@ -7,6 +7,14 @@
     --placeholder:#A2A0AA;
     --letras:'Raleway','sans-serif';
 }
+dialog{
+    background: rgb(53, 215, 226);
+    color: var(--titulos);
+    font-family: var(--letras);
+    border: none;
+    border-radius: 30px;
+    padding: 60px;
+}
 *{
     margin: 0;
     padding: 0;
@@ -25,7 +33,18 @@ section{
 input{
     padding: 5px 10px;
 }
+.eye{
+    position: relative;
+    cursor: pointer;
+    bottom: 55px;
+    left: 20%;
+}
 ::placeholder{
     
     color: var(--placeholder);
+}
+@media screen and (min-width: 1440px) {
+    .eye{
+        left: 22%;
+    }
 }

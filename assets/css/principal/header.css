@@ -10,6 +10,6 @@
 }
 @media screen and (min-width:580px){
     .banner{
-        height:352px;
+        height:calc(100vh - 180px);
     }
 }
