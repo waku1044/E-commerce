@@ -1,4 +1,4 @@
-import { service } from "../server/server.js";
+
 
 const btn_registro = document.querySelector("[data-btn-registro]");
 const $usuario = document.querySelector("[data-usuario]");
@@ -15,7 +15,7 @@ $usuario.addEventListener("change", validaTexto);
 function modal(text) {
   const dialog = document.querySelector("[data-modal]");
   let context = `<h3>${text}.</h3>`;
-  dialog.innerHTML = context
+  dialog.innerHTML = context;
   dialog.showModal();
   setTimeout(() => {
       dialog.close();
@@ -68,7 +68,7 @@ function repeat() {
   }
 }
 function validaTexto() {
-  if ($usuario.value.length < 4 || $usuario.value.length > 10) {
+  if ($usuario.value.length < 4 || $usuario.value.length > 12) {
     return false;
   } else {
     return true;
@@ -81,18 +81,18 @@ function validarPassword() {
     return true;  
   }
 }
-const handleSubmit = (event) => {
-  event.preventDefault();
+const handleSubmit = (e) => {
+  e.preventDefault();
   let errors = validar();
   if(Object.values(validar()).length === 0){
-    service.registro($usuario.value,pass.value)
-    .then(()=>{
+    localStorage.setItem('usuario',$usuario.value)
+      localStorage.setItem('contraseña',pass.value);
       modal('Registro Existoso.');
       setTimeout(() => {window.location.href = '../../../index.html';
-    }, 2000);})
+    }, 2000);
   
   }else{
-    modal(errors);
+    modal(Object.values(errors).join('<br>'));
   };
 }
 btn_registro.addEventListener("click", handleSubmit);

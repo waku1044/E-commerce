@@ -1,4 +1,6 @@
 import { service } from "../server/server.js";
+import modal from "../modal/modal.js";
+ 
 
 
 
@@ -6,6 +8,7 @@ const usuario = document.querySelector('[data-usuario]');
 const contraseña = document.querySelector('[data-contraseña]');
 const btn = document.querySelector('[data-btn]');
 const btnVer = document.querySelector('[data-btn-ver]'); 
+
 
 
 function verPass() {
@@ -17,46 +20,44 @@ btnVer.addEventListener('click',verPass)
 
 
 
-function modal(text) {
-    const dialog = document.querySelector("[data-modal]");
-    const context = `<h3>${text}.</h3>`;
-    dialog.innerHTML = context
-    dialog.showModal();
-    setTimeout(() => {
-        dialog.close();
-    }, 3000);
+// function modal(text) {
+//     const dialog = document.querySelector("[data-modal]");
+//     const context = `<h3>${text}.</h3>`;
+//     dialog.innerHTML = context
+//     dialog.showModal();
+//     setTimeout(() => {
+//         dialog.close();
+//     }, 3000);
     
-}
-function ingreso(){
+// }
 usuario.focus()
+function ingreso(){
 
     const data = {
         usuario: usuario.value,
         contraseña: contraseña.value
     }
     if(usuario.value != '' && contraseña.value != ''){
-        // console.log(data)
-         service.login(data.usuario,data.contraseña)
-         .then(res=>{
-            console.log(res)
-             if(res.success){
-             
-                 localStorage.setItem('usuario',res.user)
-                 modal(res.message);
-                 setTimeout(() => {
-                     window.location.href = './assets/pages/usuario/principal.html'
-                     
-                 }, 2000);
-
+        
+            if(data.usuario == localStorage.getItem('usuario') && data.contraseña == localStorage.getItem('contraseña')){
+                modal('Ingresado ...');
+                setTimeout(() => {
+                    window.location.href = './assets/pages/usuario/principal.html'
+                    
+                }, 2000);
+                
              }else if(data.usuario == 'admin' && data.contraseña == 'admin'){
+                modal('Ingresado ...');
                 localStorage.setItem('usuario','admin')
-                 window.location.href = './assets/pages/administrador/administrador.html'
+                setTimeout(() => { 
+                    window.location.href = './assets/pages/administrador/administrador.html'
+                }, 2000);
 
              }else{
-                modal(res.message)  
+                modal('Usuario o contraseña incorrectos');  
                 
              }
-         })
+         
          
     }else{
         modal('Por favor rellene todos los campos')
