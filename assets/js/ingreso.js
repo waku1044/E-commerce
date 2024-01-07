@@ -10,11 +10,12 @@ const btn = document.querySelector('[data-btn]');
 const btnVer = document.querySelector('[data-btn-ver]'); 
 
 
-
+btnVer.src = './assets/img/eyeClose.svg'
 function verPass() {
+    // console.log(btnVer.src)
+    btnVer.src == './assets/img/eyeClose.svg'? btnVer.src = './assets/img/eyeOpen.svg': btnVer.src = './assets/img/eyeClose.svg';
     contraseña.type == 'password'?contraseña.type = 'text':contraseña.type = 'password';
     // console.log(btnVer.src)
-btnVer.src === 'http://127.0.0.1:5500/Frontend/assets/img/eyeClose.svg'?btnVer.src = './assets/img/eyeOpen.svg':btnVer.src = './assets/img/eyeClose.svg';
 }
 btnVer.addEventListener('click',verPass)
 
