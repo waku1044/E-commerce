@@ -7,12 +7,12 @@ import modal from "../modal/modal.js";
 const usuario = document.querySelector('[data-usuario]');
 const contraseña = document.querySelector('[data-contraseña]');
 const btn = document.querySelector('[data-btn]');
-const btnVer = document.querySelector('[data-btn-ver]'); 
+const btnVer = document.querySelector('#ver'); 
 
 
 btnVer.src = './assets/img/eyeClose.svg'
 function verPass() {
-    // console.log(btnVer.src)
+    console.log(btnVer.src)
     btnVer.src == './assets/img/eyeClose.svg'? btnVer.src = './assets/img/eyeOpen.svg': btnVer.src = './assets/img/eyeClose.svg';
     contraseña.type == 'password'?contraseña.type = 'text':contraseña.type = 'password';
     // console.log(btnVer.src)
