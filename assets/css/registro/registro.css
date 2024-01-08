@@ -10,3 +10,8 @@
 main{
     height: calc(100vh - 250px);
 }
+dialog{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}

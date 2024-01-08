@@ -8,9 +8,12 @@ const btnVer = document.querySelector('#ver');
 
 
 btnVer.src = './assets/img/eyeOpen.svg'
-function verPass() {
-    
-    btnVer.src == 'http://127.0.0.1:5500/Frontend/assets/img/eyeClose.svg'? btnVer.src = './assets/img/eyeOpen.svg': btnVer.src = './assets/img/eyeClose.svg';
+// let url = window.location.host
+// console.log(window.location.host)
+
+console.log(btnVer.src)
+function verPass(){  
+    btnVer.src == './assets/img/eyeOpen.svg'? btnVer.src = `./assets/img/eyeClose.svg`: btnVer.src = './assets/img/eyeOpen.svg';
     contraseña.type == 'password'?contraseña.type = 'text':contraseña.type = 'password';
     // console.log(btnVer.src)
 }

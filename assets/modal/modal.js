@@ -1,8 +1,8 @@
 // const popap = document.querySelector("#modal");
 function modal(text) {
     const dialog = document.querySelector("[data-modal]");
-    const context = `<p>${text}</p>`;
-    dialog.innerHTML = context
+    let context = `<p>${text}</p>`;
+    dialog.innerHTML = context;
     dialog.showModal();
     setTimeout(() => {
         dialog.close();

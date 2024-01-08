@@ -1,4 +1,4 @@
-import modal from "../modal/modal.js";
+import  modal from "../modal/modal.js";
 
 const btn_registro = document.querySelector("[data-btn-registro]");
 const $usuario = document.querySelector("[data-usuario]");
@@ -12,16 +12,6 @@ const $repeat = document.querySelector("[data-repeat-contraseña]");
 $usuario.focus();
 $usuario.addEventListener("change", validaTexto);
 
-// function modal(text) {
-//   const dialog = document.querySelector("[data-modal]");
-//   let context = `<h3>${text}.</h3>`;
-//   dialog.innerHTML = context;
-//   dialog.showModal();
-//   setTimeout(() => {
-//       dialog.close();
-//   }, 3000);
-  
-// }
 function validar() {
   let msjUsuario = document.querySelector(".usuario");
   let msjPass = document.querySelector(".password");
@@ -45,20 +35,10 @@ function validar() {
     msjRepeat.innerText =  msjErrors.repeatPassword;
   }else if (!repeat()) {
     msjErrors.repeatPassword = "No coincide la contraseña";
-    msjRepeat.innerText =  msjErrors.repeatPassword; 
+    setTimeout(() => {msjRepeat.innerText =  msjErrors.repeatPassword}, 3000); 
   }
   return msjErrors;
-  // else{
-  //     alert('Registro Existoso.');
-  //     // let user = document.querySelector('[data-usuario]').value;
-  //     // let pass = document.querySelector('[data-contraseña]').value;
-  //     // let fecha = new Date().toLocaleDateString();
-  //     // let hora = new Date().toLocaleTimeString();
-  //     // // service.agregarusuario(user,pass,fecha,hora)
-  //     // localStorage.setItem('usuario',user);
-  //     // localStorage.setItem('contraseña',pass);
-  //     // window.location.href = '../../../index.html';
-  // }
+
 }
 function repeat() {
   if (pass.value !== $repeat.value) {
@@ -84,15 +64,13 @@ function validarPassword() {
 const handleSubmit = (e) => {
   e.preventDefault();
   let errors = validar();
-  if(Object.values(validar()).length === 0){
+  console.log(errors)
+  if(Object.values(errors).length === 0){
     localStorage.setItem('usuario',$usuario.value)
       localStorage.setItem('contraseña',pass.value);
       modal('Registro Existoso.');
       setTimeout(() => {window.location.href = '../../../index.html';
     }, 2000);
-  
-  }else{
-    modal(Object.values(errors).join('<br>'));
-  };
+  }
 }
 btn_registro.addEventListener("click", handleSubmit);
