@@ -1,4 +1,4 @@
-
+import modal from "../modal/modal.js";
 
 const btn_registro = document.querySelector("[data-btn-registro]");
 const $usuario = document.querySelector("[data-usuario]");
@@ -12,16 +12,16 @@ const $repeat = document.querySelector("[data-repeat-contraseña]");
 $usuario.focus();
 $usuario.addEventListener("change", validaTexto);
 
-function modal(text) {
-  const dialog = document.querySelector("[data-modal]");
-  let context = `<h3>${text}.</h3>`;
-  dialog.innerHTML = context;
-  dialog.showModal();
-  setTimeout(() => {
-      dialog.close();
-  }, 3000);
+// function modal(text) {
+//   const dialog = document.querySelector("[data-modal]");
+//   let context = `<h3>${text}.</h3>`;
+//   dialog.innerHTML = context;
+//   dialog.showModal();
+//   setTimeout(() => {
+//       dialog.close();
+//   }, 3000);
   
-}
+// }
 function validar() {
   let msjUsuario = document.querySelector(".usuario");
   let msjPass = document.querySelector(".password");

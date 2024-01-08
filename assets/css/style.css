@@ -11,7 +11,7 @@ dialog{
     background: rgb(53, 215, 226);
     color: var(--titulos);
     font-family: var(--letras);
-    border: none;
+    border: 2px 2px 2px 2px solid var(#000);
     border-radius: 30px;
     padding: 60px;
 }
